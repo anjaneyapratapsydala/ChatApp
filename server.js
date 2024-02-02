@@ -12,9 +12,9 @@ app.use(express.json());
 dotenv.config({ path: path.join(__dirname, "./.env") }); 
 connectToMongoDB(); // Connect to Database
 
-app.use("/api/user", userRoutes);
-app.use("/api/chat", chatRoutes);
-app.use("/api/message", messageRoutes);
+app.use("http://localhost:5000/api/user", userRoutes);
+app.use("http://localhost:5000/api/chat", chatRoutes);
+app.use("http://localhost:5000/api/message", messageRoutes);
 
 // --------------------------DEPLOYMENT------------------------------
 
